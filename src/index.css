@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   COLOR PALETTE CONFIGURATION
+   Change any HEX code below to update colors across the entire website!
+   ========================================================================== */
+:root {
+  --brand-dark: #1b1c29;
+  /* Header, footer, dark backgrounds */
+  --brand-blue: #1d3a8b;
+  /* Primary brand color, emergency bar, badges */
+  --brand-gold: #ce6d1e;
+  /* Accent buttons, icons, highlights */
+  --brand-orange: #ea580c;
+  /* Alert elements & secondary CTA */
+  --brand-silver: #c1ccda;
+  /* Light grey borders & muted text */
+  --brand-bg: #ffffff;
+  /* Main page background color */
+}
+
+/* Map CSS variables into Tailwind v4 theme utility classes */
+@theme {
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-silver: var(--brand-silver);
+  --color-brand-light: var(--brand-bg);
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--brand-bg);
+  color: #0f172a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cinzel', serif;
+}
