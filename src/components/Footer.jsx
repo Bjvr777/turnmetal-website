@@ -84,27 +84,29 @@ export default function Footer() {
                                     <a href={`mailto:${companyInfo.email}`} className="hover:text-white text-sm">
                                         {companyInfo.email}
                                     </a>
-                                    <li className="flex items-start space-x-3">
-                                        <Mail className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
-                                        <div className="flex flex-col space-y-1">
-                                            {companyInfo.secondaryEmail && (
-                                                <a href={`mailto:${companyInfo.secondaryEmail}`} className="hover:text-white text-sm">
-                                                    {companyInfo.secondaryEmail}
-                                                </a>
-                                            )}
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
+                                </div>
+                            </li>
+                            <li className="flex items-start space-x-3">
+                                <Mail className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
+                                <div className="flex flex-col space-y-1">
+                                    {companyInfo.secondaryEmail && (
+                                        <a href={`mailto:${companyInfo.secondaryEmail}`} className="hover:text-white text-sm">
+                                            {companyInfo.secondaryEmail}
+                                        </a>
+                                    )}
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    {/* Copyright */}
-                    <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-                        <p>© {new Date().getFullYear()} {companyInfo.name} All rights reserved.</p>
-                        <p className="text-slate-600">Built for Milling & Industrial Plant Maintenance</p>
-                    </div>
                 </div>
+
+                {/* Copyright */}
+                <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                    <p>© {new Date().getFullYear()} {companyInfo.name} All rights reserved.</p>
+                    <p className="text-slate-600">Built for Milling & Industrial Plant Maintenance</p>
+                </div>
+            </div>
         </footer>
     );
 }
