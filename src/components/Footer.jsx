@@ -12,20 +12,20 @@ export default function Footer() {
 
                     {/* Company Intro */}
                     <div className="space-y-4">
-                    <Link to="/" className="inline-block">
-                        <img 
-                        src="/logo.png" 
-                        alt="Turn-Metal Engineering" 
-                        className="h-12 w-auto object-contain" 
-                        />
-                    </Link>
-                    <p className="text-sm text-slate-400 leading-relaxed">
-                        {companyInfo.tagline}
-                    </p>
-                    <div className="flex items-center space-x-2 text-xs text-brand-silver bg-slate-800/60 px-3 py-2 rounded border border-slate-700/50 w-fit">
-                        <ShieldCheck className="w-4 h-4 text-brand-gold" />
-                        <span>Precision Guaranteed Standard</span>
-                    </div>
+                        <Link to="/" className="inline-block">
+                            <img
+                                src="/logo.png"
+                                alt="Turn-Metal Engineering"
+                                className="h-12 w-auto object-contain"
+                            />
+                        </Link>
+                        <p className="text-sm text-slate-400 leading-relaxed">
+                            {companyInfo.tagline}
+                        </p>
+                        <div className="flex items-center space-x-2 text-xs text-brand-silver bg-slate-800/60 px-3 py-2 rounded border border-slate-700/50 w-fit">
+                            <ShieldCheck className="w-4 h-4 text-brand-gold" />
+                            <span>Precision Guaranteed Standard</span>
+                        </div>
                     </div>
 
                     {/* Core Services Links */}
@@ -84,24 +84,27 @@ export default function Footer() {
                                     <a href={`mailto:${companyInfo.email}`} className="hover:text-white text-sm">
                                         {companyInfo.email}
                                     </a>
-                                    {companyInfo.secondaryEmail && (
-                                        <a href={`mailto:${companyInfo.secondaryEmail}`} className="hover:text-white text-sm">
-                                            {companyInfo.secondaryEmail}
-                                        </a>
-                                    )}
-                                </div>
-                            </li>
-                        </ul>
+                                    <li className="flex items-start space-x-3">
+                                        <Mail className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
+                                        <div className="flex flex-col space-y-1">
+                                            {companyInfo.secondaryEmail && (
+                                                <a href={`mailto:${companyInfo.secondaryEmail}`} className="hover:text-white text-sm">
+                                                    {companyInfo.secondaryEmail}
+                                                </a>
+                                            )}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
                     </div>
 
+                    {/* Copyright */}
+                    <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                        <p>© {new Date().getFullYear()} {companyInfo.name} All rights reserved.</p>
+                        <p className="text-slate-600">Built for Milling & Industrial Plant Maintenance</p>
+                    </div>
                 </div>
-
-                {/* Copyright */}
-                <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-                    <p>© {new Date().getFullYear()} {companyInfo.name} All rights reserved.</p>
-                    <p className="text-slate-600">Built for Milling & Industrial Plant Maintenance</p>
-                </div>
-            </div>
         </footer>
     );
 }

@@ -110,3 +110,7 @@ Next Step: **Initialize Repository & React + Tailwind Project Setup**
 ```
 
 ```
+site update
+git add .
+git commit -m "Updated website text/images"
+git push
