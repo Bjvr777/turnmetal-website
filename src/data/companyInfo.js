@@ -4,8 +4,8 @@ export const companyInfo = {
     tagline: "Precision Engineering & Specialist Maintenance for the Grain Industry",
     phone: "+27 63 266 0374",
     whatsapp: "+27 63 266 0374",
-    email: "turnmetal.workshop@gmail.com",
-    secondaryEmail: "sales@turnmetal.co.za", // <-- Added second email here
+    email: "info@turnmetal.co.za",
+    secondaryEmail: "bobbie@turnmetal.co.za", // <-- Added second email here
     address: "Frankfort, Freestate, South Africa",
     hours: "Mon - Fri: 07:00 - 17:00 | 24/7 Breakdown Support",
     services: [
